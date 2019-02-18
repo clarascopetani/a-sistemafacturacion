@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: "Lato", sans-serif;
+    background-color: #2a333d;
+}
+
+ul {
+    padding-inline-start: 0;
+    margin-block-start: 1em;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: .25rem;
+}
+
+button {
+    margin-right:15px;
+}
+
+.container{
+    margin-top:5%;
+}
+
+.div-col{
+    padding:2%;
+    float: left;
+}
+
+.col-cliente{
+    background-color: aliceblue;
+    padding-top:1em; 
+}
+
+.col-factura{
+    background-color: white;
+}
+
+.col-acciones{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: aliceblue; 
+}
+
+
+.col-totales{
+    margin-top: 0.4em;
+    margin-bottom: 1em;
+    padding-top: 2em;
+    background-color: aliceblue; 
+    float: right;
+}
+
+.datos-cliente{
+    font-size: 1rem;
+    line-height: 0.2rem;
+    color: var(--blue);
+}
+
+.ocultar{
+    display: none;  
+}
+
+h4{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 0.8rem;
+    margin-bottom: 1.6rem;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    font-size: 1.1em;
+}
+
+#totales td {
+    text-align: right;
+}
