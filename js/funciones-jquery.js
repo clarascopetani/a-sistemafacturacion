@@ -1,10 +1,10 @@
-$(window).ready( function(){
-    var $botonIniciar = $('#botonIniciar');
-    var $botAgregarProducto = $('#botAgregarProducto');
-    var $acciones = $('#acciones');
-    var $datosFactura = $('#datosFactura');
-    var $lisDatos = $('#cliente');
+var $botonIniciar = $('#botonIniciar');
+var $botAgregarProducto = $('#botAgregarProducto');
+var $acciones = $('#acciones');
+var $datosFactura = $('#datosFactura');
+var $lisDatos = $('#cliente');
 
+$(window).ready( function(){
     $datosFactura.hide();
     $botonIniciar.click(registrarCliente);
     $botAgregarProducto.click(cargarProducto);
@@ -17,3 +17,5 @@ $(window).ready( function(){
         }
     );
 });
+
+

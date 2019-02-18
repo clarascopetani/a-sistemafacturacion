@@ -1,21 +1,11 @@
+.ocultar{
+    display: none;  
+}
+
 body {
     margin: 0;
     font-family: "Lato", sans-serif;
     background-color: #2a333d;
-}
-
-ul {
-    padding-inline-start: 0;
-    margin-block-start: 1em;
-}
-
-.list-group-item:first-child {
-    border-top-left-radius: 1.25rem;
-    border-top-right-radius: .25rem;
-}
-
-button {
-    margin-right:15px;
 }
 
 .container{
@@ -24,7 +14,15 @@ button {
 
 .div-col{
     padding:2%;
+    min-height: 10em;
     float: left;
+}
+
+.div-row{
+    margin-right: 0;
+    margin-left:  0;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .col-cliente{
@@ -37,29 +35,51 @@ button {
 }
 
 .col-acciones{
-    margin-top: 1em;
-    margin-bottom: 1em;
     padding: 1em;
     background-color: aliceblue; 
 }
 
 
 .col-totales{
-    margin-top: 0.4em;
-    margin-bottom: 1em;
-    padding-top: 2em;
+    box-sizing: border-box;
+    padding: 1.5em;
     background-color: aliceblue; 
     float: right;
 }
 
-.datos-cliente{
-    font-size: 1rem;
-    line-height: 0.2rem;
-    color: var(--blue);
+/* LISTAS */
+ul {
+    padding-inline-start: 0;
+    margin-block-start: 1em;
 }
 
-.ocultar{
-    display: none;  
+.list-group-item:first-child {
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: .25rem;
+}
+
+/* TABLAS */
+.table {
+    width: 100%;
+    margin: 0;
+    color: #212529;
+}
+
+#totalesUS.table{
+    background-color: #99c3d4;
+    color: white;
+}
+
+/* BOTONES */
+button {
+    margin-right:15px;
+}
+
+
+/* TEXTOS */
+
+h3{
+    color:white;
 }
 
 h4{
@@ -77,4 +97,17 @@ h4{
 
 #totales td {
     text-align: right;
+    color: darkblue;
+}
+
+
+#totalesUS td {
+    text-align: right;
+    color: white;
+}
+
+.datos-cliente{
+    font-size: 1rem;
+    line-height: 0.2rem;
+    color: var(--blue);
 }

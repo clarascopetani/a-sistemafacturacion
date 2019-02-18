@@ -8,6 +8,9 @@ const Cajero = {
     datosCliente: ["nombre", "apellido", "dni", "edad"],
     datosProducto: ["detalle", "cantidad", "precio"],
     listadoProductos: [],
+    subtotal:0,
+    nuevoDescuento: 0,
+    cotizacionDolar:39.5,
 
     sumTotales: function(){
         var total = this.listadoProductos.sum("productoTotal")
@@ -15,19 +18,12 @@ const Cajero = {
     },
     
     calcularIVA: function(i){
-        i = (i*21)/100
+        i = Math.round(i*0.21*100)/100
         return i
-    },
-
-    subtotal:0,
-
-    nuevoDescuento: 0
+        
+    }
 
 }
-
-var clienteCobrar;
-var productoCobrar;
-
 
 // SUMAR TOTALES
 Array.prototype.sum = function (prop) {
@@ -40,7 +36,6 @@ Array.prototype.sum = function (prop) {
 
 // PEDIR DATOS
 function pedirDatos(i, datoString, tipo){
-    console.log("volvi a cero")
     switch (tipo) {
         case 'texto' :
         i =  pedirDato(i, datoString, tipo);
@@ -101,6 +96,7 @@ function aplicarDescuento(){
 
 // ELIMINAR DESCUENTO
 function eliminarDescuento(){
+    alert('Se borrará el descuento aplicado de: ' + '$' + Cajero.nuevoDescuento)
     Cajero.nuevoDescuento = 0,
     document.getElementById('numDescuento').innerHTML = '$' + Cajero.nuevoDescuento;
     actualizarTotal()

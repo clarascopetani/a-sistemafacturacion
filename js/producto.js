@@ -16,10 +16,12 @@ class Producto {
 
         cell1.innerHTML = this.detalle;
         cell2.innerHTML = this.cantidad;
-        cell3.innerHTML = this.precio;
-        cell4.innerHTML = this.productoTotal;
+        cell3.innerHTML = '$' + this.precio;
+        cell4.innerHTML = '$' + this.productoTotal;
 	}
 }
+
+var productoCobrar;
 
 // AGREGAR PRODUCTOS
 function cargarProducto(){

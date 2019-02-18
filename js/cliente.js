@@ -16,6 +16,8 @@ class Cliente {
 	}
 }
 
+var clienteCobrar;
+
 //CARGAR CLIENTE A COBRAR
 function registrarCliente(){
     var nombre = pedirDatos(nombre, Cajero.datosCliente[0], 'texto' )
