@@ -2,11 +2,11 @@ crearBotones('acciones', "Nuevo Cliente", 'botCliente', 'btn-primary', registrar
 
 function nuevaFactura(){
     document.getElementById('botCliente').classList.add("ocultar");
-    crearBotones('acciones', "Agregar Producto", 'botAgregarProducto', 'btn-primary', cargarProducto)
-    crearBotones('acciones', "Aplicar Descuento", 'botDescuento','btn-primary', aplicarDescuento)
-    crearBotones('acciones', "Eliminar Descuento", 'botBorrarDescuento', 'btn-primary', eliminarDescuento)
+    crearBotones('acciones', "Agregar Producto", 'botAgregarProducto', 'btn-secondary', cargarProducto)
+    crearBotones('acciones', "Aplicar Descuento", 'botDescuento','btn-secondary', aplicarDescuento)
+    crearBotones('acciones', "Eliminar Descuento", 'botBorrarDescuento', 'btn-secondary', eliminarDescuento)
+    crearBotones('acciones', "Imprimir Factura", 'botImprimir', 'btn-info', window.print)
 }
-
 
 function actualizarTotal(){
     Cajero.subtotal = Cajero.sumTotales()
@@ -23,3 +23,4 @@ function actualizarTotal(){
     document.getElementById('numIvaUS').innerHTML = '$' + ivaUS;
     document.getElementById('numTotalUS').innerHTML = '$' + totalUS;
 }
+

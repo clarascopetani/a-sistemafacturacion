@@ -4,7 +4,7 @@
 
 body {
     margin: 0;
-    font-family: "Lato", sans-serif;
+    font-family: "Raleway", sans-serif;
     background-color: #2a333d;
 }
 
@@ -14,7 +14,6 @@ body {
 
 .div-col{
     padding:2%;
-    min-height: 10em;
     float: left;
 }
 
@@ -27,23 +26,25 @@ body {
 
 .col-cliente{
     background-color: aliceblue;
-    padding-top:1em; 
+    padding-top:1em;
+    min-height: 10em;
 }
 
 .col-factura{
     background-color: white;
+    min-height: 10em;
 }
 
 .col-acciones{
     padding: 1em;
-    background-color: aliceblue; 
+    
 }
 
 
 .col-totales{
+    background-color: aliceblue; 
     box-sizing: border-box;
     padding: 1.5em;
-    background-color: aliceblue; 
     float: right;
 }
 
@@ -73,20 +74,33 @@ ul {
 /* BOTONES */
 button {
     margin-right:15px;
+    margin-bottom:6px; 
 }
+.btn-secondary {
+    color: #fff;
+    background-color: #52a07c;
+    border-color: #24b582;
+}
+
 
 
 /* TEXTOS */
 
-h3{
+h3 {
     color:white;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    text-align: left;
+    line-height: 1.5em;
 }
 
-h4{
-    font-size: 1.2rem;
+h4 {
+    font-size: 1.2em;
     font-weight: bold;
-    margin-top: 0.8rem;
-    margin-bottom: 1.6rem;
+    margin-top: 0.8em;
+    margin-bottom: 1.6em;
 }
 
 .table thead th {
@@ -98,16 +112,40 @@ h4{
 #totales td {
     text-align: right;
     color: darkblue;
+    font-size: 1.2em;
 }
 
 
 #totalesUS td {
     text-align: right;
     color: white;
+    font-size: 1.2em;
 }
 
 .datos-cliente{
     font-size: 1rem;
     line-height: 0.2rem;
     color: var(--blue);
+}
+
+@media print {
+    .btn {
+      display: none;
+    }
+    h3 {
+        display: none;
+    }
+    body {
+        background-color: white;
+    }
+    .col-factura{
+        background-color: #fbfcfd;
+    }
+    #totalesUS.table, #totalesUS td{ color:grey;}
+}
+
+@media (max-width: 576px){
+    .container {
+        max-width: 570px;
+    }
 }

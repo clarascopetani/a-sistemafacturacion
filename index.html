@@ -14,13 +14,14 @@
     <script src='js/producto.js'> </script>
     <script src='js/cajero.js'> </script>
    
-    <title>Cajero</title>
+    <title>Factura Cliente</title>
   </head>
   <body>
 
 <div class="container">
-    <h3>Sistema de Facturación</h3>
-    <div id="acciones" class="col-12 col-acciones" ></div>
+    <div class="col-4 col-acciones div-col" ><h3>Sistema de Facturación</h3></div>
+    <div id="acciones" class="col-8 col-acciones div-col" ></div>
+    <div style="clear:both">
     <div id="factura" class="row div-row">            
         <div id="datosCliente" class="col-4 col-cliente div-col" >
             <h4>Datos del cliente</h4>
@@ -33,7 +34,7 @@
                             <th scope="col">Detalle</th>
                             <th scope="col">Cantidad</th>
                             <th scope="col">Precio</th>
-                            <th scope="col">Total</th>
+                            <th scope="col">Total factura</th>
                         </tr>
                 </thead>
                 <tbody id="listProductos">
