@@ -5,9 +5,12 @@ const Cajero = {
     nuevoProducto: function(detalle, cantidad, precio, precioTotal){
         productoCobrar = new Producto(detalle, cantidad, precio, precioTotal);
     },
+    
     datosCliente: ["nombre", "apellido", "dni", "edad"],
     datosProducto: ["detalle", "cantidad", "precio"],
+    
     listadoProductos: [],
+    
     subtotal:0,
     nuevoDescuento: 0,
     cotizacionDolar:39.5,
