@@ -5,7 +5,7 @@ const Cajero = {
     nuevoProducto: function(detalle, cantidad, precio, precioTotal){
         productoCobrar = new Producto(detalle, cantidad, precio, precioTotal);
     },
-    
+
     datosCliente: ["nombre", "apellido", "dni", "edad"],
     datosProducto: ["detalle", "cantidad", "precio"],
     
@@ -73,17 +73,6 @@ function pedirDato(i, datoString, tipo){
 function pedirDatoValido(datoString){
     alert('Por favor, ingrese el ' + datoString + ' valido');
 }
-
-//CREAR BOTONES DINAMICOS
-function crearBotones(idSelect, nombreBot, idBot, claseBot, funcionClick){
-    var productButton = document.createElement('button');
-    var productButtonDiv = document.getElementById(idSelect);
-    productButtonDiv.appendChild(productButton).addEventListener('click', function(){
-        funcionClick(), false});
-    productButton.classList.add('btn', claseBot);
-    productButton.setAttribute('id', idBot);
-	productButton.innerHTML = nombreBot;
-};
 
 // AGREGAR DESCUENTO
 function aplicarDescuento(){

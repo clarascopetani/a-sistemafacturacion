@@ -5,20 +5,6 @@ class Producto {
         this.precio = precio,
         this.productoTotal = productoTotal
     }
-
-    printProducto() {
-        const tabla = document.querySelector('tbody');
-        var row = tabla.insertRow(0);
-        var cell1 = row.insertCell(0);
-        var cell2 = row.insertCell(1);
-        var cell3 = row.insertCell(2);
-        var cell4 = row.insertCell(3);
-
-        cell1.innerHTML = this.detalle;
-        cell2.innerHTML = this.cantidad;
-        cell3.innerHTML = '$' + this.precio;
-        cell4.innerHTML = '$' + this.productoTotal;
-	}
 }
 
 var productoCobrar;
@@ -31,7 +17,7 @@ function cargarProducto(){
     var total = cantidad*precio;
 
     Cajero.nuevoProducto(detalle, cantidad, precio, total);
-    productoCobrar.printProducto()
+    printProducto()
     Cajero.listadoProductos.push(productoCobrar);
     actualizarTotal()
 }
